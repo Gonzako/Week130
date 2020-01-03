@@ -51,6 +51,19 @@ public class possesableMovement : MonoBehaviour, IPossesable
         grounded = false;
         groundedCoroutine = null;
     }
+
+    private void moveCharacter()
+    {
+        rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed * Time.fixedDeltaTime);
+        horizontalInput = 0;
+    }
+
+    private void doJump()
+    {
+        rb.AddForce(Vector2.up * jumpForce);
+        grounded = false;
+        jump = false;
+    }
     #endregion
 
 
@@ -77,31 +90,21 @@ public class possesableMovement : MonoBehaviour, IPossesable
     {
         if (possessed)
         {
-
-            rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed * Time.fixedDeltaTime);
-            horizontalInput = 0;
+            moveCharacter();
             if (jump)
             {
-                rb.AddForce(Vector2.up * jumpForce);
-                grounded = false;
-                jump = false;
+                doJump();
             }
         }
     }
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (possessed)
         {
-            if (collision.contactCount == 0)
-            {
-                if(groundedCoroutine == null && grounded)
-                {
-                    groundedCoroutine = StartCoroutine("stopGrounded");
-                        
-                }
-            }
-            else
+
             {
                 for (int i = 0; i < collision.contactCount; i++)
                 {
@@ -110,6 +113,18 @@ public class possesableMovement : MonoBehaviour, IPossesable
                         grounded = true;
                     }
                 }
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.contactCount == 0 && possessed)
+        {
+            if (groundedCoroutine == null && grounded)
+            {
+                groundedCoroutine = StartCoroutine("stopGrounded");
+
             }
         }
     }
