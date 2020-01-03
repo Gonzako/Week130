@@ -20,7 +20,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
     Rigidbody2D rb;
     [SerializeField]
     float jumpForce, horizontalSpeed;
-    int horizontalInput { get { return (int)Input.GetAxisRaw("Horizontal"); } };
+    int horizontalInput = 0;
     #endregion
 
     #region Public Methods
@@ -47,7 +47,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
  
     void Update()
     {
-
+        horizontalInput = (int)Input.GetAxisRaw("Horizontal");
     }
 
     void FixedUpdate()
