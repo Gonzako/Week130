@@ -16,7 +16,7 @@ public class UnityMixerController : MonoBehaviour
     private const string musicVolume = "Music Volume";
     #region Public Fields
     [SerializeField]
-    AudioMixer aM;
+    AudioMixer audioMixer;
     [Space(10)]
     [SerializeField]
     Slider masterSlider;
@@ -31,15 +31,15 @@ public class UnityMixerController : MonoBehaviour
     #region Public Methods
     public void setMasterVolume(float value)
     {
-        aM.SetFloat(masterVolume, value);
+        audioMixer.SetFloat(masterVolume, value);
     }
     public void setSFXVolume(float value)
     {
-        aM.SetFloat(sfxVolume, value);
+        audioMixer.SetFloat(sfxVolume, value);
     }
     public void setMusicVolume(float value)
     {
-        aM.SetFloat(musicVolume, value);
+        audioMixer.SetFloat(musicVolume, value);
     }
     #endregion
 
@@ -62,9 +62,9 @@ public class UnityMixerController : MonoBehaviour
     {
         float masterVolumeValue = 0, musicVolumeValue = 0, sfxVolumeValue = 0;
 
-        aM.GetFloat(UnityMixerController.masterVolume, out masterVolumeValue);
-        aM.GetFloat(UnityMixerController.sfxVolume, out sfxVolumeValue);
-        aM.GetFloat(UnityMixerController.musicVolume, out musicVolumeValue);
+        audioMixer.GetFloat(masterVolume, out masterVolumeValue);
+        audioMixer.GetFloat(sfxVolume, out sfxVolumeValue);
+        audioMixer.GetFloat(musicVolume, out musicVolumeValue);
 
         PlayerPrefs.SetFloat(masterVolume, masterVolumeValue);
         PlayerPrefs.SetFloat(sfxVolume, sfxVolumeValue);
