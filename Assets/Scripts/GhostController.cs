@@ -19,11 +19,9 @@ public class GhostController : MonoBehaviour
 
     // Start is called before the first frame update
 
-
     // Update is called once per frame
     private void Update()
     {
-        
         FlipCharacter();
     }
 
@@ -55,19 +53,15 @@ public class GhostController : MonoBehaviour
     private void HorizontalMovement()
     {
         _horizontalInput = Input.GetAxis("Horizontal");
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            _rigidbody.velocity += new Vector2(_horizontalInput * Mathf.Clamp(_runSpeed / Time.deltaTime, 0F, 5F), 0F);
-        }
+
+        _rigidbody.velocity += new Vector2(_horizontalInput * _walkSpeed, 0F);
     }
 
     private void VerticalMovement()
     {
         _verticalInput = Input.GetAxis("Vertical");
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            _rigidbody.velocity += new Vector2(_verticalInput * Mathf.Clamp(_runSpeed / Time.deltaTime, 0F, 5F), 0F);
-        }
+
+        _rigidbody.velocity += new Vector2(0, _verticalInput * _walkSpeed);
     }
 
     private void FlipCharacter()
