@@ -7,11 +7,19 @@
  
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
  
 public class UnityMixerController : MonoBehaviour
 {
     #region Public Fields
-    public AudioMixer aM;
+    [SerializeField]
+    AudioMixer aM;
+    [Space(10)]
+    [SerializeField]
+    Slider masterSlider;
+    [SerializeField]
+    Slider sfxSlider, musicSlider;
+
     #endregion
  
     #region Private Fields
@@ -36,18 +44,27 @@ public class UnityMixerController : MonoBehaviour
     #endregion
 
 
-    #if false
+#if true
     #region Unity API
 
-    void Start()
+    private void Start()
     {
+        
     }
- 
-    void FixedUpdate()
+
+    private void OnDisable()
     {
+        float masterVolume = 0, musicVolume = 0, sfxVolume = 0;
+
+        aM.GetFloat("Master Volume", out masterVolume);
+        aM.GetFloat("SFX Volume", out sfxVolume);
+        aM.GetFloat("Music Volume", out musicVolume);
+
+
+
     }
 
     #endregion
-    #endif
- 
+#endif
+
 }
