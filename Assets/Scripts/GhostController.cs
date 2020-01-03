@@ -76,7 +76,7 @@ public class GhostController : MonoBehaviour
         }
     }
 
-    private void GhostDisable()
+    private void GhostDisable(GameObject disabler)
     {
         this.gameObject.SetActive(false);
     }

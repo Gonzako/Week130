@@ -13,7 +13,7 @@ using UnityEngine;
 public class possesableMovement : MonoBehaviour, IPossesable
 {
     #region Public Fields
-    public static event Action onAnyPosses;
+    public static event Action<GameObject> onAnyPosses;
     public event Action onThisPosses;
     #endregion
 

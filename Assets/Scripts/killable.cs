@@ -15,6 +15,7 @@ public class killable : MonoBehaviour, Ikillable
     public static event Action<GameObject> onAnyKill;
     public event Action onThisKill;
     [SerializeField]
+    Behaviour[] componentsToDisable;
     #endregion
  
     #region Private Fields
@@ -26,6 +27,11 @@ public class killable : MonoBehaviour, Ikillable
     {
         onAnyKill?.Invoke(this.gameObject);
         onThisKill.Invoke();
+        foreach(Behaviour n in componentsToDisable)
+        {
+            n.enabled = false;
+        }
+        this.enabled = false;
     }
     #endregion
 
