@@ -5,7 +5,7 @@
  *
  */
   
-public interface IControllable
+public interface IPossesable
 {
 
     void onPosess();
