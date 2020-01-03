@@ -39,7 +39,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
     public void onPosess()
     {
         possessed = true;
-        onAnyPosses?.Invoke();
+        onAnyPosses?.Invoke(this.gameObject);
         onThisPosses?.Invoke();
     }
     #endregion
