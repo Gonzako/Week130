@@ -11,6 +11,9 @@ using UnityEngine.UI;
  
 public class UnityMixerController : MonoBehaviour
 {
+    private const string masterVolume = "Master Volume";
+    private const string sfxVolume = "SFX Volume";
+    private const string musicVolume = "Music Volume";
     #region Public Fields
     [SerializeField]
     AudioMixer aM;
@@ -28,15 +31,15 @@ public class UnityMixerController : MonoBehaviour
     #region Public Methods
     public void setMasterVolume(float value)
     {
-        aM.SetFloat("Master Volume", value);
+        aM.SetFloat(masterVolume, value);
     }
     public void setSFXVolume(float value)
     {
-        aM.SetFloat("SFX Volume", value);
+        aM.SetFloat(sfxVolume, value);
     }
     public void setMusicVolume(float value)
     {
-        aM.SetFloat("Music Volume", value);
+        aM.SetFloat(musicVolume, value);
     }
     #endregion
 
@@ -49,19 +52,25 @@ public class UnityMixerController : MonoBehaviour
 
     private void Start()
     {
-        
+        masterSlider.value = PlayerPrefs.GetFloat(masterVolume, 0);
+        musicSlider.value = PlayerPrefs.GetFloat(musicVolume, 0);
+        sfxSlider.value = PlayerPrefs.GetFloat(sfxVolume, 0);
+
     }
 
     private void OnDisable()
     {
-        float masterVolume = 0, musicVolume = 0, sfxVolume = 0;
+        float masterVolumeValue = 0, musicVolumeValue = 0, sfxVolumeValue = 0;
 
-        aM.GetFloat("Master Volume", out masterVolume);
-        aM.GetFloat("SFX Volume", out sfxVolume);
-        aM.GetFloat("Music Volume", out musicVolume);
+        aM.GetFloat(UnityMixerController.masterVolume, out masterVolumeValue);
+        aM.GetFloat(UnityMixerController.sfxVolume, out sfxVolumeValue);
+        aM.GetFloat(UnityMixerController.musicVolume, out musicVolumeValue);
 
+        PlayerPrefs.SetFloat(masterVolume, masterVolumeValue);
+        PlayerPrefs.SetFloat(sfxVolume, sfxVolumeValue);
+        PlayerPrefs.SetFloat(musicVolume, musicVolumeValue);
 
-
+        PlayerPrefs.Save();
     }
 
     #endregion

@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1914677714}
         m_MethodName: setSFXVolume
         m_Mode: 0
         m_Arguments:
@@ -1473,8 +1473,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: setMasterVolume
+      - m_Target: {fileID: 1914677714}
+        m_MethodName: setSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1573,8 +1573,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: setMusicVolume
+      - m_Target: {fileID: 1914677714}
+        m_MethodName: setSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2044,6 +2044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aM: {fileID: 24100000, guid: c454c668de1b0ff4188842ad0bb9e87e, type: 2}
+  masterSlider: {fileID: 1251450591}
+  sfxSlider: {fileID: 72016305}
+  musicSlider: {fileID: 1380342988}
 --- !u!1 &1923633698
 GameObject:
   m_ObjectHideFlags: 0
