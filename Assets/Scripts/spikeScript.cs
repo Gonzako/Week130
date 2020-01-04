@@ -36,6 +36,8 @@ public class spikeScript : killerBase
     {
         yield return new WaitForSeconds(freezeTime);
         other.attachedRigidbody.constraints = 0;
+        other.attachedRigidbody.AddForce(Vector2.down);
+        other.attachedRigidbody.AddTorque(UnityEngine.Random.Range(-1, 1));
     }
     #endregion
 
