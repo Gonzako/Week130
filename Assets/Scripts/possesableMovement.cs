@@ -15,6 +15,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
     #region Public Fields
     public static event Action<GameObject> onAnyPosses, onAnyDeposses;
     public event Action onThisPosses, onThisDeposses, onThisJump;
+    public bool Possessed { get { return possessed; } }
     #endregion
 
     #region Private Fields

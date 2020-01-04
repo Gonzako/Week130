@@ -37,10 +37,10 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Vertical Velocity
-    m_EventTreshold: 2
+    m_EventTreshold: 0.5
   - m_ConditionMode: 3
     m_ConditionEvent: Vertical Velocity
-    m_EventTreshold: -2
+    m_EventTreshold: -0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8869203340177365352}
   m_Solo: 0
@@ -63,10 +63,10 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
+  - m_ConditionMode: 4
     m_ConditionEvent: Vertical Velocity
     m_EventTreshold: 0.1
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Vertical Velocity
     m_EventTreshold: -0.1
   m_DstStateMachine: {fileID: 0}
@@ -83,6 +83,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-3367796015311830869
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Carrot_walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 453ef002221ae7b47be1150382dbf350, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-2884829625745145424
 AnimatorState:
   serializedVersion: 5
@@ -269,22 +295,25 @@ AnimatorStateMachine:
     m_Position: {x: 900, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -388446439057279693}
-    m_Position: {x: 520, y: -130, z: 0}
+    m_Position: {x: 500, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8869203340177365352}
-    m_Position: {x: 790, y: -130, z: 0}
+    m_Position: {x: 800, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2884829625745145424}
     m_Position: {x: 1100, y: -130, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3367796015311830869}
+    m_Position: {x: 1135, y: -65, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1113555062323346767}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 100, y: -130, z: 0}
+  m_AnyStatePosition: {x: 300, y: -130, z: 0}
   m_EntryPosition: {x: 100, y: 170, z: 0}
-  m_ExitPosition: {x: 1420, y: -130, z: 0}
+  m_ExitPosition: {x: 1400, y: -130, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -8307159821052930877}
 --- !u!1101 &7666390550970897240
@@ -297,7 +326,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Vertical Velocity
-    m_EventTreshold: -2
+    m_EventTreshold: -0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2884829625745145424}
   m_Solo: 0
@@ -360,7 +389,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 453ef002221ae7b47be1150382dbf350, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

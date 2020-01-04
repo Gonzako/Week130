@@ -20,7 +20,7 @@ public class possesableAnimationHandler : MonoBehaviour
     #region Private Fields
     Rigidbody2D rb;
     Vector3 nextLocalSpace;
-
+    possesableMovement PossesableMovement;
     private const string jumpTrigger = "Jump";
     private const string walkingBool = "Walking";
     private const string verticalVelVariable = "Vertical Velocity";
@@ -76,12 +76,16 @@ public class possesableAnimationHandler : MonoBehaviour
             animator = GetComponent<Animator>();
         }
         rb = GetComponent<Rigidbody2D>();
+        PossesableMovement = GetComponent<possesableMovement>();
     }
 
     private void Update()
     {
-        flipCheck();
-        refreshAnimatorVariables();
+        if (PossesableMovement.Possessed)
+        {
+            flipCheck();
+            refreshAnimatorVariables(); 
+        }
     }
 
 
