@@ -5,9 +5,11 @@ public class GhostController : MonoBehaviour
     public Rigidbody2D _rigidbody;
     private SpriteRenderer _playerSprite;
     private Transform _transform;
+    private bool _ghostEnabled;
 
-    private possesableMovement _possessableCharacter = null;
+    [SerializeField] private possesableMovement _possessableCharacter = null;
     private possesableMovement[] _possesableCharacters;
+    private possesableMovement _currentlyPossessed;
 
     public float _horizontalInput;
     public float _verticalInput;
@@ -15,14 +17,9 @@ public class GhostController : MonoBehaviour
     [Header("Movement Properties ")]
     [SerializeField] private float _floatSpeed;
 
-
-
-
     public delegate void GhostEvents();
     public GhostEvents onDeath;
    
-
-
     public bool isPhasingThroughObject()
     {
         if (!_playerSprite.isVisible)
@@ -35,25 +32,40 @@ public class GhostController : MonoBehaviour
 
     private void Update()
     {
-        FlipCharacter();
+        if (_ghostEnabled)
+        {
+            _possessableCharacter = GetNearestPosessableCharacter();
+            FlipCharacter();
+            PromptCharacterPosession();
+        }
+        else if(!_ghostEnabled && Input.GetKeyDown(KeyCode.E))
+        {
+            _currentlyPossessed.onDeposess();
+        }
     }
 
     private void FixedUpdate()
     {
-        HorizontalMovement();
-        VerticalMovement();
-        Debug.Log(isPhasingThroughObject());
+        if (_ghostEnabled)
+        {
+            HorizontalMovement();
+            VerticalMovement();
+
+            Debug.Log(isPhasingThroughObject());
+        }
     }
 
     private void OnEnable()
     {
         CacheRefences();
         possesableMovement.onAnyPosses += GhostDisable;
+        possesableMovement.onAnyDeposses += GhostEnable;
     }
 
     private void OnDisable()
     {
         possesableMovement.onAnyPosses -= GhostDisable;
+        possesableMovement.onAnyDeposses -= GhostEnable;
     }
 
     private void CacheRefences()
@@ -62,6 +74,7 @@ public class GhostController : MonoBehaviour
         _playerSprite = GetComponent<SpriteRenderer>();
         _transform = GetComponent<Transform>();
         _possesableCharacters = FindObjectsOfType<possesableMovement>();
+        _ghostEnabled = true;
     }
 
     private void HorizontalMovement()
@@ -92,7 +105,14 @@ public class GhostController : MonoBehaviour
 
     private void GhostDisable(GameObject disabler)
     {
-        this.gameObject.SetActive(false);
+        _ghostEnabled = false;
+        _playerSprite.enabled = false;
+    }
+
+    private void GhostEnable(GameObject disabler)
+    {
+        _ghostEnabled = true;
+        _playerSprite.enabled = true;
     }
 
     private void PromptCharacterPosession()
@@ -103,6 +123,7 @@ public class GhostController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _possessableCharacter.onPosess();
+                _currentlyPossessed = _possessableCharacter;
             }
         }
     }
@@ -118,7 +139,7 @@ public class GhostController : MonoBehaviour
             {
                 nearest = character;
             }
-            else if (Vector2.Distance(nearest.transform.position, _transform.position) <
+            else if (Vector2.Distance(nearest.transform.position, _transform.position) >
                Vector2.Distance(character.transform.position, _transform.position))
             {
                 nearest = character;
