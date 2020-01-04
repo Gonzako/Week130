@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cb8061ae88ebd4ab979cfbfabc2849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeTime: 3
+  freezeTime: 1.5
   freezeForever: 0
 --- !u!1 &1756502128
 GameObject:
@@ -760,6 +760,11 @@ PrefabInstance:
       propertyPath: componentsToDisable.Array.data[0]
       value: 
       objectReference: {fileID: 807622749}
+    - target: {fileID: 8492217459324468723, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468725, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.x
