@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PossessController : MonoBehaviour
 {
-
     [SerializeField] private possesableMovement _possessableCharacter = null;
-    private possesableMovement[] _possesableCharacters;
+    private List<possesableMovement> _possesableCharacters;
     private possesableMovement _currentlyPossessed;
     private GhostController _ghost;
     private Transform _transform;
@@ -17,6 +16,7 @@ public class PossessController : MonoBehaviour
         CacheRefrences();
         _ghost.onEnable += StopPosession;
         _ghost.onDisable += StartPosession;
+        killable.onAnyKill += RemoveDeadCharacterFromPossessables;
     }
 
     private void OnDisable()
@@ -24,19 +24,22 @@ public class PossessController : MonoBehaviour
         _ghost.onEnable -= StopPosession;
         _ghost.onDisable -= StartPosession;
     }
+
     private void CacheRefrences()
     {
         _ghost = GetComponent<GhostController>();
         _transform = GetComponent<Transform>();
-        _possesableCharacters = FindObjectsOfType<possesableMovement>();
+        _possesableCharacters = FindObjectsOfType<possesableMovement>().
+            OfType<possesableMovement>().ToList();
         _canPossess = true;
     }
+
     private void Update()
     {
         Debug.Log(_canPossess);
         if (_canPossess)
         {
-            _possessableCharacter = GetNearestPosessableCharacter();      
+            _possessableCharacter = GetNearestPosessableCharacter();
             PromptCharacterPosession();
         }
         else if (!_canPossess && Input.GetKeyDown(KeyCode.E))
@@ -89,5 +92,11 @@ public class PossessController : MonoBehaviour
     private void StartPosession()
     {
         _canPossess = false;
+    }
+
+    private void RemoveDeadCharacterFromPossessables(GameObject possessable)
+    {
+        _possesableCharacters.
+            Remove(possessable.GetComponent<possesableMovement>());
     }
 }
