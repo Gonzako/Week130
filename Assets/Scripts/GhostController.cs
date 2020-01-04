@@ -17,9 +17,22 @@ public class GhostController : MonoBehaviour
 
     [SerializeField] private float _runSpeed;
 
-    // Start is called before the first frame update
 
-    // Update is called once per frame
+    public delegate void GhostEvents();
+    public GhostEvents onDeath;
+   
+
+
+    public bool isPhasingThroughObject()
+    {
+        if (!_playerSprite.isVisible)
+        {
+            Debug.Log("Inside a wall");
+            return true;
+        }
+        return false;
+    }
+
     private void Update()
     {
         FlipCharacter();
@@ -63,16 +76,6 @@ public class GhostController : MonoBehaviour
         _verticalInput = Input.GetAxis("Vertical");
 
         _rigidbody.AddForce(new Vector2(0, _verticalInput  * _walkSpeed));
-    }
-
-    public bool isPhasingThroughObject()
-    {
-        if (!_playerSprite.isVisible)
-        {
-            Debug.Log("Inside a wall");
-            return true;
-        }
-        return false;
     }
 
     private void FlipCharacter()
