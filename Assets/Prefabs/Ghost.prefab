@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8916849855329511084}
   - component: {fileID: 8916849855329511085}
   - component: {fileID: 8916849855329511089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,8 +119,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   _horizontalInput: 0
   _verticalInput: 0
-  _walkSpeed: 2
-  _runSpeed: 50
+  _floatSpeed: 0
 --- !u!61 &8916849855329511089
 BoxCollider2D:
   m_ObjectHideFlags: 0
