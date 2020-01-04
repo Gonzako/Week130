@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8916849855329511087}
   - component: {fileID: 8916849855329511084}
   - component: {fileID: 8916849855329511085}
+  - component: {fileID: 7542255271889716747}
   - component: {fileID: 8916849855329511089}
   m_Layer: 10
   m_Name: Ghost
@@ -116,10 +117,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab69557246a0c4297267d9a8f4ea53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 0}
+  _floatSpeed: 0
   _horizontalInput: 0
   _verticalInput: 0
-  _floatSpeed: 0
+--- !u!114 &7542255271889716747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916849855329511082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff1cf4b41fa03747933774ebaeda266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _possessableCharacter: {fileID: 0}
 --- !u!61 &8916849855329511089
 BoxCollider2D:
   m_ObjectHideFlags: 0

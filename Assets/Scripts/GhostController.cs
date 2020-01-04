@@ -2,24 +2,22 @@
 
 public class GhostController : MonoBehaviour
 {
-    public Rigidbody2D _rigidbody;
+    private Rigidbody2D _rigidbody;
     private SpriteRenderer _playerSprite;
     private Transform _transform;
-    private bool _ghostEnabled;
-
-    [SerializeField] private possesableMovement _possessableCharacter = null;
-    private possesableMovement[] _possesableCharacters;
-    private possesableMovement _currentlyPossessed;
-
-    public float _horizontalInput;
-    public float _verticalInput;
+    private bool _canMove;
+    
 
     [Header("Movement Properties ")]
     [SerializeField] private float _floatSpeed;
 
+    public float _horizontalInput;
+    public float _verticalInput;
     public delegate void GhostEvents();
     public GhostEvents onDeath;
-   
+    public GhostEvents onEnable;
+    public GhostEvents onDisable;
+  
     public bool isPhasingThroughObject()
     {
         if (!_playerSprite.isVisible)
@@ -32,26 +30,15 @@ public class GhostController : MonoBehaviour
 
     private void Update()
     {
-        if (_ghostEnabled)
-        {
-            _possessableCharacter = GetNearestPosessableCharacter();
-            FlipCharacter();
-            PromptCharacterPosession();
-        }
-        else if(!_ghostEnabled && Input.GetKeyDown(KeyCode.E))
-        {
-            _currentlyPossessed.onDeposess();
-        }
+        FlipCharacter();
     }
 
     private void FixedUpdate()
     {
-        if (_ghostEnabled)
+        if (_canMove)
         {
             HorizontalMovement();
             VerticalMovement();
-
-            Debug.Log(isPhasingThroughObject());
         }
     }
 
@@ -74,8 +61,7 @@ public class GhostController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerSprite = GetComponent<SpriteRenderer>();
         _transform = GetComponent<Transform>();
-        _possesableCharacters = FindObjectsOfType<possesableMovement>();
-        _ghostEnabled = true;
+        _canMove = true;
     }
 
     private void HorizontalMovement()
@@ -106,48 +92,17 @@ public class GhostController : MonoBehaviour
 
     private void GhostDisable(GameObject disabler)
     {
-        _ghostEnabled = false;
+        _canMove = false;
         _playerSprite.enabled = false;
+        onDisable?.Invoke();
     }
 
     private void GhostEnable(GameObject disabler)
     {
-        _ghostEnabled = true;
+        _canMove = true;
+        this.enabled = true;
         _playerSprite.enabled = true;
-        _transform.position = _currentlyPossessed.transform.position + new Vector3(0F, 1F);
-    }
-
-    private void PromptCharacterPosession()
-    {
-        if (_possessableCharacter != null)
-        {
-            Debug.Log(_possessableCharacter.name + "can be controlled!");
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                _possessableCharacter.onPosess();
-                _currentlyPossessed = _possessableCharacter;
-            }
-        }
-    }
-
-    private possesableMovement GetNearestPosessableCharacter()
-    {
-        possesableMovement nearest = null;
-        //Currently we have no character scripts to
-
-        foreach (possesableMovement character in _possesableCharacters)
-        {
-            if (nearest == null)
-            {
-                nearest = character;
-            }
-            else if (Vector2.Distance(nearest.transform.position, _transform.position) >
-               Vector2.Distance(character.transform.position, _transform.position))
-            {
-                nearest = character;
-            }
-        }
-
-        return nearest;
+        onEnable?.Invoke();
+       
     }
 }
