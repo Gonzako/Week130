@@ -13,8 +13,8 @@ using UnityEngine;
 public class possesableMovement : MonoBehaviour, IPossesable
 {
     #region Public Fields
-    public static event Action<GameObject> onAnyPosses;
-    public event Action onThisPosses;
+    public static event Action<GameObject> onAnyPosses, onAnyDeposses;
+    public event Action onThisPosses, onThisDeposses;
     #endregion
 
     #region Private Fields
@@ -41,6 +41,13 @@ public class possesableMovement : MonoBehaviour, IPossesable
         possessed = true;
         onAnyPosses?.Invoke(this.gameObject);
         onThisPosses?.Invoke();
+    }
+
+    public void onDeposess()
+    {
+        possessed = false;
+        onThisPosses?.Invoke();
+        onAnyDeposses?.Invoke(this.gameObject);
     }
     #endregion
 
