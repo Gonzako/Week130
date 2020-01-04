@@ -60,6 +60,7 @@ public class GhostController : MonoBehaviour
         CacheRefences();
         possesableMovement.onAnyPosses += GhostDisable;
         possesableMovement.onAnyDeposses += GhostEnable;
+        killable.onAnyKill += GhostEnable;
     }
 
     private void OnDisable()
@@ -113,6 +114,7 @@ public class GhostController : MonoBehaviour
     {
         _ghostEnabled = true;
         _playerSprite.enabled = true;
+        _transform.position = _currentlyPossessed.transform.position + new Vector3(0F, 1F);
     }
 
     private void PromptCharacterPosession()
