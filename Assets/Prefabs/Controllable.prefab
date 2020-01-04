@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactLeeway: 0.194
-  possessed: 1
+  possessed: 0
   coyoteTime: 0.3
   jumpForce: 300
   horizontalSpeed: 300

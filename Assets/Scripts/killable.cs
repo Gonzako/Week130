@@ -31,7 +31,7 @@ public class killable : MonoBehaviour, Ikillable
         {
             n.enabled = false;
         }
-        this.gameObject.layer = LayerMask.GetMask("Interactibles");
+        this.gameObject.layer = LayerMask.NameToLayer("Interactibles");
         this.enabled = false;
     }
     #endregion
