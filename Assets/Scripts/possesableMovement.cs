@@ -14,7 +14,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
 {
     #region Public Fields
     public static event Action<GameObject> onAnyPosses, onAnyDeposses;
-    public event Action onThisPosses, onThisDeposses;
+    public event Action onThisPosses, onThisDeposses, onThisJump;
     #endregion
 
     #region Private Fields
@@ -67,6 +67,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     private void doJump()
     {
+        onThisJump?.Invoke();
         rb.AddForce(Vector2.up * jumpForce);
         grounded = false;
         jump = false;
