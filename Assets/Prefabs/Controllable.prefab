@@ -70,7 +70,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.73, y: 0.0001}
+  m_Size: {x: 0.88, y: 1.09}
   m_Direction: 0
 --- !u!114 &8492217459324468722
 MonoBehaviour:
@@ -87,7 +87,7 @@ MonoBehaviour:
   contactLeeway: 0.194
   possessed: 0
   coyoteTime: 0.3
-  jumpForce: 300
+  jumpForce: 150
   horizontalSpeed: 300
   raycastDownLeeway: 0.2
 --- !u!114 &8492217459324468721
