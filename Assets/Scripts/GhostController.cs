@@ -13,9 +13,9 @@ public class GhostController : MonoBehaviour
     public float _verticalInput;
 
     [Header("Movement Properties ")]
-    [SerializeField] private float _walkSpeed;
+    [SerializeField] private float _floatSpeed;
 
-    [SerializeField] private float _runSpeed;
+
 
 
     public delegate void GhostEvents();
@@ -68,14 +68,14 @@ public class GhostController : MonoBehaviour
     {
         _horizontalInput = Input.GetAxis("Horizontal");
 
-        _rigidbody.AddForce(new Vector2(_horizontalInput  * _walkSpeed, 0F));
+        _rigidbody.AddForce(new Vector2(_horizontalInput  * _floatSpeed, 0F));
     }
 
     private void VerticalMovement()
     {
         _verticalInput = Input.GetAxis("Vertical");
 
-        _rigidbody.AddForce(new Vector2(0, _verticalInput  * _walkSpeed));
+        _rigidbody.AddForce(new Vector2(0, _verticalInput  * _floatSpeed));
     }
 
     private void FlipCharacter()
