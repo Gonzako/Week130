@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8492217459324468724}
   - component: {fileID: 8492217459324468722}
   - component: {fileID: 8492217459324468721}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Controllable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.73, y: 1.21}
+  m_Size: {x: 0.73, y: 0.0001}
   m_Direction: 0
 --- !u!114 &8492217459324468722
 MonoBehaviour:
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8492217459964589506}
   - component: {fileID: 8492217459964589505}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
