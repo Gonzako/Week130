@@ -18,7 +18,12 @@ public class possesableAnimationHandler : MonoBehaviour
     #endregion
 
     #region Private Fields
+    Rigidbody2D rb;
     Vector3 nextLocalSpace;
+
+    private const string jumpTrigger = "Jump";
+    private const string walkingBool = "Walking";
+    private const string verticalVelVariable = "Vertical Velocity";
     #endregion
 
     #region Public Methods
@@ -40,6 +45,24 @@ public class possesableAnimationHandler : MonoBehaviour
             transform.localScale = nextLocalSpace;
         }
     }
+
+    private void refreshAnimatorVariables()
+    {
+        if (Input.GetButton("Jump"))
+        {
+            animator.SetTrigger(jumpTrigger);
+        }
+        if(Input.GetAxisRaw("Horizontal") != 0)
+        {
+            animator.SetBool(walkingBool, true);
+        }
+        else
+        {
+            animator.SetBool(walkingBool, false);
+        }
+        animator.SetFloat(verticalVelVariable, rb.velocity.y);
+    }
+
     #endregion
 
 
@@ -52,13 +75,14 @@ public class possesableAnimationHandler : MonoBehaviour
         {
             animator = GetComponent<Animator>();
         }
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         flipCheck();
+        refreshAnimatorVariables();
     }
-
 
 
     void FixedUpdate()
