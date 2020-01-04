@@ -29,6 +29,7 @@ public class GhostController : MonoBehaviour
     {
         HorizontalMovement();
         VerticalMovement();
+        Debug.Log(isPhasingThroughObject());
     }
 
     private void OnEnable()
@@ -54,14 +55,24 @@ public class GhostController : MonoBehaviour
     {
         _horizontalInput = Input.GetAxis("Horizontal");
 
-        _rigidbody.velocity += new Vector2(_horizontalInput * _walkSpeed, 0F);
+        _rigidbody.AddForce(new Vector2(_horizontalInput  * _walkSpeed, 0F));
     }
 
     private void VerticalMovement()
     {
         _verticalInput = Input.GetAxis("Vertical");
 
-        _rigidbody.velocity += new Vector2(0, _verticalInput * _walkSpeed);
+        _rigidbody.AddForce(new Vector2(0, _verticalInput  * _walkSpeed));
+    }
+
+    public bool isPhasingThroughObject()
+    {
+        if (!_playerSprite.isVisible)
+        {
+            Debug.Log("Inside a wall");
+            return true;
+        }
+        return false;
     }
 
     private void FlipCharacter()
