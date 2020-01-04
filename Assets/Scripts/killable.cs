@@ -26,7 +26,7 @@ public class killable : MonoBehaviour, Ikillable
     public void onKill()
     {
         onAnyKill?.Invoke(this.gameObject);
-        onThisKill.Invoke();
+        onThisKill?.Invoke();
         foreach(Behaviour n in componentsToDisable)
         {
             n.enabled = false;
