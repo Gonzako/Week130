@@ -209,6 +209,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.AnimationCurve.m_Curve.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
       propertyPath: BehaviorAtStart
       value: 2
       objectReference: {fileID: 0}
@@ -777,30 +792,335 @@ PrefabInstance:
       propertyPath: ShowBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.data[4].outWeight
       value: 0.33333334
       objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: CustomStartAnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: CustomStartAnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: CustomStartAnchoredPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.PresetCategory
+      value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.PresetName
+      value: TwistRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Direction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.EaseType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Ease
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Duration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.To.z
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.RotateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Ease
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Ease
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783086298021, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1800618783086298023, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783086298023, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.3019608
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783086298023, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.44705883
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783086298023, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.32156864
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: BehaviorAtStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.PresetCategory
+      value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.PresetName
+      value: ExtremelySlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.By.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.Ease
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Rotate.By.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Rotate.RotateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Rotate.Ease
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.From.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.From.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.From.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.To.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.To.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.To.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.Ease
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Fade.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Fade.From
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Fade.To
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783268051932, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Fade.Duration
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.AnimationCurve.m_Curve.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.AnimationCurve.m_Curve.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.PresetCategory
+      value: Flip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.PresetName
+      value: FlipAndMoveToBottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Direction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Ease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Move.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.To.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.RotateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Ease
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Rotate.Duration
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.To.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Ease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Scale.Duration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.StartDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800618783374821642, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: HideBehavior.Animation.Fade.Duration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1800618783640085645, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
@@ -832,6 +1152,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1756502130}
+    - target: {fileID: 1800618784149361669, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7382804205581c44dbb0b78a06a0fc7f, type: 3}
 --- !u!224 &368098357 stripped

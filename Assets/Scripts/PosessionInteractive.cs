@@ -32,7 +32,7 @@ public class PosessionInteractive : MonoBehaviour
             (character.transform.position + new Vector3(0F, 1.5F));
         _interact.Show();
        */
-        _interact.position = Camera.main.WorldToScreenPoint
+        _interact.anchoredPosition = Camera.main.WorldToScreenPoint
             (character.transform.position + new Vector3(0F, 1.5F));
     }
 
