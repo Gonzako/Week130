@@ -28,11 +28,13 @@ public class GameManager : MonoBehaviour
     {
         CacheRefences();
         _ghost.onDeath += LevelFailure;
+        GoalHandler.onPlayerTouchedAnyGoal += LevelComplete;
     }
 
     private void OnDisable()
     {
         _ghost.onDeath -= LevelFailure;
+        GoalHandler.onPlayerTouchedAnyGoal -= LevelComplete;
     }
 
     public void LevelFailure()
