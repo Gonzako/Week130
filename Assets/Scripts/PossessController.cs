@@ -11,7 +11,9 @@ public class PossessController : MonoBehaviour
     private Transform _transform;
     private bool _canPossess;
 
-    [SerializeField]private GameObject _interact;
+    public delegate void PosessionEvents(possesableMovement character);
+    public static PosessionEvents onAnyPosessionPrompt;
+    public static PosessionEvents onAnyPosessionPromptEnd;
 
     private void OnEnable()
     {
@@ -55,21 +57,19 @@ public class PossessController : MonoBehaviour
     {
         if (_possessableCharacter != null)
         {
-            _interact.transform.position = _possessableCharacter.transform.position + new Vector3(1F,1.5F);
-            _interact.gameObject.SetActive(true);
+            onAnyPosessionPrompt?.Invoke(_possessableCharacter);
             Debug.Log(_possessableCharacter.name + "can be controlled!");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _possessableCharacter.onPosess();
                 _currentlyPossessed = _possessableCharacter;
                 _possessableCharacter = null;
-                _interact.gameObject.SetActive(false);
+                onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
             }
-
         }
         else
         {
-            _interact.gameObject.SetActive(false);
+            onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
         }
     }
 
