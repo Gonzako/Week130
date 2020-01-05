@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 2371295604408254122}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f557621e12e4d1e458f0f438a6a493b2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9100cc972ee6a2a4c9ce765902353d7f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 8492217459324468726, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_Name
-      value: Controllable
+      value: CarrotControllable
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}

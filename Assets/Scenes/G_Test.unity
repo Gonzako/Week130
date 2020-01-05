@@ -1005,6 +1005,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 807622747, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9100cc972ee6a2a4c9ce765902353d7f, type: 2}
     - target: {fileID: 2371295604408254121, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 2371295604408254122, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: m_Name
-      value: Controllable
+      value: carrotPossesable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}
