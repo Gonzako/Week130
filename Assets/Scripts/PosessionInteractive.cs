@@ -7,7 +7,7 @@ using Doozy.Engine.UI;
 
 public class PosessionInteractive : MonoBehaviour
 {
-    [SerializeField] private UIView _interact;
+    [SerializeField] private RectTransform _interact;
 
     public string ViewCategory;
     public string ViewName;
@@ -27,15 +27,17 @@ public class PosessionInteractive : MonoBehaviour
 
     private void InteractionUIPrompt(possesableMovement character)
     {
+        /*
         _interact.RectTransform.position = Camera.main.WorldToScreenPoint
             (character.transform.position + new Vector3(0F, 1.5F));
         _interact.Show();
-       
+       */
+
     }
 
     private void InteractionUIPromptEnd(possesableMovement character)
     {
-        _interact.Hide(true);
+        //_interact.Hide(true);
     }
 
 }
