@@ -15,6 +15,6 @@ MonoBehaviour:
   CategoryName: In-Game
   DatabaseType: 2
   Names:
-  - Settings
-  - Restart Level
-  - Back To Main Menu
+  - IG-Pause Menu
+  - IG-Settings
+  - IG-In-Game

@@ -19,8 +19,10 @@ MonoBehaviour:
   - General
   - Main Menu
   - In-Game
+  - TransitionViews
   Categories:
   - {fileID: 11400000, guid: 40f9e81ff80114a47a3721228ba749ed, type: 2}
   - {fileID: 11400000, guid: b601c33644b153f42965551c5fe90fb8, type: 2}
   - {fileID: 11400000, guid: 3318cdb947c141a449ffeddf2b30cf39, type: 2}
   - {fileID: 11400000, guid: 9f90fc4fa874d664b8544c56467187df, type: 2}
+  - {fileID: 11400000, guid: 223dd8268009644419590b3d17bcdcd7, type: 2}

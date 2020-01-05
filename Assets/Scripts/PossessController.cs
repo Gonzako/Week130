@@ -11,6 +11,10 @@ public class PossessController : MonoBehaviour
     private Transform _transform;
     private bool _canPossess;
 
+    public delegate void PosessionEvents(possesableMovement character);
+    public static PosessionEvents onAnyPosessionPrompt;
+    public static PosessionEvents onAnyPosessionPromptEnd;
+
     private void OnEnable()
     {
         CacheRefrences();
@@ -53,12 +57,19 @@ public class PossessController : MonoBehaviour
     {
         if (_possessableCharacter != null)
         {
+            onAnyPosessionPrompt?.Invoke(_possessableCharacter);
             Debug.Log(_possessableCharacter.name + "can be controlled!");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _possessableCharacter.onPosess();
                 _currentlyPossessed = _possessableCharacter;
+                _possessableCharacter = null;
+                onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
             }
+        }
+        else
+        {
+            onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
         }
     }
 
