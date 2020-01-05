@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42f06ff6cc543ea942180e019f0fc8d, type: 3}
-  m_Name: UIView_In-Game
+  m_Name: UIButton_TransitionViews
   m_EditorClassIdentifier: 
-  CategoryName: In-Game
-  DatabaseType: 2
+  CategoryName: TransitionViews
+  DatabaseType: 0
   Names:
-  - Settings
-  - Pause Menu
+  - Restart Level
+  - Next Level
