@@ -64,7 +64,7 @@ public class PossessController : MonoBehaviour
                 _possessableCharacter.onPosess();
                 _currentlyPossessed = _possessableCharacter;
                 _possessableCharacter = null;
-                onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
+                onAnyPosessionPromptEnd?.Invoke(_currentlyPossessed);
             }
         }
         else

@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Doozy;
+using Doozy.Engine.UI;
 
 public class PosessionInteractive : MonoBehaviour
 {
-    [SerializeField] private GameObject _interact;
+    [SerializeField] private UIView _interact;
+
+    public string ViewCategory;
+    public string ViewName;
 
     private void OnEnable()
     {
+       
         PossessController.onAnyPosessionPrompt += InteractionUIPrompt;
         PossessController.onAnyPosessionPromptEnd += InteractionUIPromptEnd;
     }
@@ -20,13 +27,15 @@ public class PosessionInteractive : MonoBehaviour
 
     private void InteractionUIPrompt(possesableMovement character)
     {
-        _interact.transform.position = character.transform.position + new Vector3(1F, 1.5F);
-        _interact.gameObject.SetActive(true);
+        _interact.RectTransform.position = Camera.main.WorldToScreenPoint
+            (character.transform.position + new Vector3(0F, 1.5F));
+        _interact.Show();
+       
     }
 
     private void InteractionUIPromptEnd(possesableMovement character)
     {
-        _interact.gameObject.SetActive(false);
+        _interact.Hide(true);
     }
 
 }
