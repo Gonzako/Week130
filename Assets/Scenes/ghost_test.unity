@@ -635,21 +635,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
-    - target: {fileID: 8916849855329511085, guid: 51df5fa6555e2ec47bc31593e6170f5e,
-        type: 3}
-      propertyPath: _walkSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916849855329511085, guid: 51df5fa6555e2ec47bc31593e6170f5e,
-        type: 3}
-      propertyPath: _runSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916849855329511085, guid: 51df5fa6555e2ec47bc31593e6170f5e,
-        type: 3}
-      propertyPath: _floatSpeed
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8916849855329511086, guid: 51df5fa6555e2ec47bc31593e6170f5e,
         type: 3}
       propertyPath: m_LocalPosition.x
