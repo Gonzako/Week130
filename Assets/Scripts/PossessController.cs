@@ -51,6 +51,7 @@ public class PossessController : MonoBehaviour
         }
         else if (!_canPossess && Input.GetKeyDown(KeyCode.E))
         {
+            onDepossessing?.Invoke(_currentlyPossessed.gameObject);
             _currentlyPossessed.onDeposess();
             _currentlyPossessed = null;
         }
