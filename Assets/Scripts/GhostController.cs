@@ -6,8 +6,8 @@ public class GhostController : MonoBehaviour
     private SpriteRenderer _playerSprite;
     private Transform _transform;
     private bool _canMove;
-    
-
+    private PossessController _possessCont;
+    private killable _currentPossessed;
     [Header("Movement Properties ")]
     [SerializeField] private float _floatSpeed;
 
@@ -45,15 +45,15 @@ public class GhostController : MonoBehaviour
     private void OnEnable()
     {
         CacheRefences();
-        possesableMovement.onAnyPosses += GhostDisable;
-        possesableMovement.onAnyDeposses += GhostEnable;
-        killable.onAnyKill += GhostEnable;
+        _possessCont.onPossessing += GhostDisable;
+        _possessCont.onDepossessing += GhostEnable;
+        //killable.onAnyKill += GhostEnable;
     }
 
     private void OnDisable()
     {
-        possesableMovement.onAnyPosses -= GhostDisable;
-        possesableMovement.onAnyDeposses -= GhostEnable;
+        _possessCont.onPossessing -= GhostDisable;
+        _possessCont.onDepossessing -= GhostEnable;
     }
 
     private void CacheRefences()
@@ -61,6 +61,7 @@ public class GhostController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerSprite = GetComponent<SpriteRenderer>();
         _transform = GetComponent<Transform>();
+        _possessCont = GetComponent<PossessController>();
         _canMove = true;
     }
 
@@ -90,15 +91,19 @@ public class GhostController : MonoBehaviour
         }
     }
 
-    private void GhostDisable(GameObject disabler)
+    private void GhostDisable(GameObject target)
     {
         _canMove = false;
         _playerSprite.enabled = false;
+        _currentPossessed = target.GetComponent<killable>();
+        _currentPossessed.onThisKill += GhostEnable;
         onDisable?.Invoke();
     }
 
     private void GhostEnable(GameObject disabler)
     {
+        _currentPossessed.onThisKill -= GhostEnable;
+        _currentPossessed = null;
         _canMove = true;
         this.enabled = true;
         _playerSprite.enabled = true;

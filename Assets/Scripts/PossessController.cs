@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class PossessController : MonoBehaviour
     private GhostController _ghost;
     private Transform _transform;
     private bool _canPossess;
+
+    public event Action<GameObject> onPossessing, onDepossessing;
 
     public delegate void PosessionEvents(possesableMovement character);
     public static PosessionEvents onAnyPosessionPrompt;
@@ -61,8 +64,10 @@ public class PossessController : MonoBehaviour
             Debug.Log(_possessableCharacter.name + "can be controlled!");
             if (Input.GetKeyDown(KeyCode.E))
             {
+
                 _possessableCharacter.onPosess();
                 _currentlyPossessed = _possessableCharacter;
+                onPossessing.Invoke(_currentlyPossessed.gameObject);
                 _possessableCharacter = null;
                 onAnyPosessionPromptEnd?.Invoke(_currentlyPossessed);
             }
