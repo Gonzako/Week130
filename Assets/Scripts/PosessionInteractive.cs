@@ -41,6 +41,7 @@ public class PosessionInteractive : MonoBehaviour
 
     private void InteractionUIPromptEnd(possesableMovement character)
     {
+
         //_interact.Hide(true);
     }
 
