@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
 
     public delegate void GameEvents();
-    public GameEvents onLevelComplete;
-    public GameEvents onLevelFail;
-    public GameEvents onLevelStart;
+    public static GameEvents onLevelComplete;
+    public static GameEvents onLevelFail;
+    public static GameEvents onLevelStart;
 
     private GhostController _ghost;
 
@@ -27,19 +27,20 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         CacheRefences();
-        _ghost.onDeath += LevelFailure;
+        spikeScript.onAnySpike += LevelFailure;
         GoalHandler.onPlayerTouchedAnyGoal += LevelComplete;
     }
 
     private void OnDisable()
     {
-        _ghost.onDeath -= LevelFailure;
+        spikeScript.onAnySpike -= LevelFailure;
         GoalHandler.onPlayerTouchedAnyGoal -= LevelComplete;
     }
 
-    public void LevelFailure()
+    public void LevelFailure(GameObject ob, Collider2D col)
     {
-        onLevelFail?.Invoke();
+        if(ob.transform.tag == "Player")
+            onLevelFail?.Invoke();
     }
 
     public void LevelComplete()
