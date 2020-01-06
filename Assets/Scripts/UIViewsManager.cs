@@ -10,11 +10,13 @@ public class UIViewsManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.onLevelFail += ShowLevelFailView;
+        GameManager.onLevelComplete += ShowLevelCompleteView;
     }
 
     private void OnDisable()
     {
         GameManager.onLevelFail -= ShowLevelFailView;
+        GameManager.onLevelComplete -= ShowLevelCompleteView;
     }
 
     private void ShowLevelFailView()

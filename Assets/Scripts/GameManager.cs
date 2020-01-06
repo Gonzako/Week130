@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void LevelFailure(GameObject ob, Collider2D col)
     {
-        if(ob.transform.tag == "Player")
+        Debug.Log("Tag : "+ col.transform.tag);
+        if(col.transform.tag == "Player")
             onLevelFail?.Invoke();
     }
 
