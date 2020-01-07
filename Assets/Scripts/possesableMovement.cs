@@ -62,14 +62,14 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     private void moveCharacter()
     {
-        rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed / Time.fixedDeltaTime);
+        rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed * Time.fixedDeltaTime);
         horizontalInput = 0;
     }
 
     private void doJump()
     {
         onThisJump?.Invoke();
-        rb.AddForce(Vector2.up * jumpForce / Time.fixedDeltaTime);
+        rb.AddForce(Vector2.up * jumpForce);
         grounded = false;
         jump = false;
     }
