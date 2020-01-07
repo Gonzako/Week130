@@ -37,6 +37,7 @@ public class PosessionInteractive : MonoBehaviour
         _interact.Show();
        */
         _interact.GetComponent<Image>().enabled = true;
+        _interact.GetComponentInChildren<Text>().enabled = true;
         _interact.position = worldToUISpace(_interact.GetComponentInParent<Canvas>(), 
             character.transform.position + new Vector3(0, character.GetComponent<Collider2D>().bounds.extents.y + verticalAdder));
         character.GetComponentInChildren<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 1.0F);
@@ -46,6 +47,7 @@ public class PosessionInteractive : MonoBehaviour
     {
 
         _interact.GetComponent<Image>().enabled = false;
+        _interact.GetComponentInChildren<Text>().enabled = false;
         character.GetComponentInChildren<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 0.0F);
     }
 
