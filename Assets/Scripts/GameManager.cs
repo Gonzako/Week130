@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void CacheRefences()
     {
         _playerKillable = GameObject.FindGameObjectWithTag(_playerBodyTag).GetComponent<killable>();
+        //careful the ones bellow are the reason you got an error, though they dont get thrown 
         if(_playerKillable.gameObject == null)
         {
             Debug.LogError("Could not find Gameobject tagged " + _playerBodyTag);
