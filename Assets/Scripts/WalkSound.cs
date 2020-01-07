@@ -48,10 +48,16 @@ public class WalkSound : MonoBehaviour
         index[currentIndex] = soundPlaying;
         Debug.Log(index[currentIndex]);
         currentIndex++;
+        if (currentIndex == shuffle)
+        {
+            currentIndex = 0;
+        }
         //Plays sound. Apparently this method is better as we made a variable and stored it rather than using a getter each time. 
         audioSource.clip = walkSounds[soundPlaying];
         audioSource.Play();
         //Resets currentIndex when it equals shuffle number
+
+
     }
 
 
