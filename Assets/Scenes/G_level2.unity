@@ -416,31 +416,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoPOssesable
       objectReference: {fileID: 0}
-    - target: {fileID: 7489343621833808686, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: groundLayers.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489343621833808686, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: extraDistanceCheck
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489343623353684765, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489343623353684765, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489343623353684765, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2ce7acc07e55d439298d8228743d78, type: 3}
 --- !u!4 &561735217 stripped
@@ -1026,21 +1001,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123728290}
     m_Modifications:
-    - target: {fileID: 2371295602909279901, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295602909279901, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295602909279901, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2371295604408254121, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: m_LocalPosition.x

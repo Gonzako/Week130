@@ -109,18 +109,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371295604408254126, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
-      propertyPath: contactLeeway
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254126, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: jumpForce
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254127, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.3
+      propertyPath: groundLayers.m_Bits
+      value: 2560
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}

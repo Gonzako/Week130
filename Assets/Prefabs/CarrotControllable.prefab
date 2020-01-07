@@ -65,18 +65,8 @@ PrefabInstance:
       objectReference: {fileID: 807622746}
     - target: {fileID: 8492217459324468722, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
-      propertyPath: contactLeeway
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 8492217459324468722, guid: bda247ffbd296084babb55f53128f9fa,
-        type: 3}
-      propertyPath: jumpForce
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8492217459324468723, guid: bda247ffbd296084babb55f53128f9fa,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.3
+      propertyPath: groundLayers.m_Bits
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468724, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
@@ -158,6 +148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarrotControllable
       objectReference: {fileID: 0}
+    - target: {fileID: 8492217459324468726, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -174,6 +169,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2094157912208876536, guid: 02c654748731ae04d87d3af95b781fb3,
         type: 3}
+    - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8492217459964589506, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.x
