@@ -1189,7 +1189,7 @@ PrefabInstance:
     - target: {fileID: 8492217459324468726, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: PlayerControllable
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
