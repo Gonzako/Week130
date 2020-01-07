@@ -97,7 +97,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     private void CheckTheGround()
     {
-        _castHit = Physics2D.CapsuleCast(transform.position, cb.size, cb.direction, 0, -transform.up, extraDistanceCheck, groundLayers);
+        _castHit = Physics2D.CapsuleCast(transform.position-(Vector3)cb.offset, cb.size, cb.direction, 0, -transform.up, extraDistanceCheck, groundLayers);
 
         if (_castHit.collider != null)
         {
@@ -118,7 +118,9 @@ public class possesableMovement : MonoBehaviour, IPossesable
 #if UNITY_EDITOR
             _DebugColour = Color.red;
             _CurrentHitDistance = (cb.bounds.extents.y + extraDistanceCheck);
+            Debug.Log(this.gameObject + "cannot jump");
 #endif
+
             areWeGrounded = false;
             if (lastUpdateHit.collider != null)
             {
@@ -166,6 +168,18 @@ public class possesableMovement : MonoBehaviour, IPossesable
             {
                 doJump();
             }
+        }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+
+        if (UnityEditor.EditorApplication.isPlaying)
+        {
+            Gizmos.color = _DebugColour;
+            Gizmos.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - _CurrentHitDistance));
+            Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y + cb.bounds.extents.x - _CurrentHitDistance), cb.bounds.extents.x);
         }
     }
     #endregion
