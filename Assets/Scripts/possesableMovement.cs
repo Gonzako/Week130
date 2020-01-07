@@ -19,6 +19,8 @@ public class possesableMovement : MonoBehaviour, IPossesable
     #endregion
 
     #region Private Fields
+    [SerializeField]
+    LayerMask groundLayers;
     [SerializeField, Range(0,1)]
     float contactLeeway;
     [SerializeField]
@@ -26,7 +28,6 @@ public class possesableMovement : MonoBehaviour, IPossesable
     [SerializeField, Range(0, 1)]
     float coyoteTime = 0.3f;
     Rigidbody2D rb;
-    Collider2D col;
     [SerializeField]
     float jumpForce, horizontalSpeed;
     [SerializeField]
@@ -34,6 +35,24 @@ public class possesableMovement : MonoBehaviour, IPossesable
     int horizontalInput = 0;
     bool jump = false, grounded = false;
     Coroutine groundedCoroutine;
+    [SerializeField]
+    private float extraDistanceCheck;
+    CapsuleCollider2D cb;
+    private bool areWeGrounded;
+    private bool areWeCoyoteTime => canWeCoyoteTime && Time.time <= coyoteTimer;
+    private float coyoteTimer;
+    private bool canWeCoyoteTime;
+    #endregion
+
+
+    #region GBSavers
+
+#if UNITY_EDITOR
+    private Color _DebugColour;
+    private float _CurrentHitDistance;
+#endif
+    private RaycastHit2D _castHit;
+    private RaycastHit2D lastUpdateHit;
     #endregion
 
     #region Public Methods
@@ -62,7 +81,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     private void moveCharacter()
     {
-        rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed * Time.fixedDeltaTime);
+        rb.AddForce(Vector2.right * horizontalInput * horizontalSpeed * Time.fixedDeltaTime, ForceMode2D.Force);
         horizontalInput = 0;
     }
 
@@ -73,6 +92,45 @@ public class possesableMovement : MonoBehaviour, IPossesable
         grounded = false;
         jump = false;
     }
+
+    private void CheckTheGround()
+    {
+        _castHit = Physics2D.CapsuleCast(transform.position, cb.size, cb.direction, 0, -transform.up, extraDistanceCheck, groundLayers);
+
+        if (_castHit.collider != null)
+        {
+#if UNITY_EDITOR
+            _DebugColour = Color.green;
+            _CurrentHitDistance = _castHit.distance + cb.bounds.extents.y;
+#endif
+
+            if (lastUpdateHit.collider == null)
+            {
+                canWeCoyoteTime = true;
+            }
+            areWeGrounded = true;
+        }
+        else
+        {
+#if UNITY_EDITOR
+            _DebugColour = Color.red;
+            _CurrentHitDistance = (cb.bounds.extents.y + extraDistanceCheck);
+#endif
+            areWeGrounded = false;
+            if (lastUpdateHit.collider != null)
+            {
+                startCoyoteTime();
+            }
+
+        }
+        lastUpdateHit = _castHit;
+
+    }
+    private void startCoyoteTime()
+    {
+        coyoteTimer = Time.time + coyoteTime;
+    }
+
     #endregion
 
 
@@ -82,7 +140,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
+        cb = GetComponent<CapsuleCollider2D>();
     }
  
     void Update()
@@ -90,50 +148,20 @@ public class possesableMovement : MonoBehaviour, IPossesable
         if (possessed)
         {
             horizontalInput = (int)Input.GetAxisRaw("Horizontal");
-            jump = Input.GetButton("Jump") && grounded;
+            jump = Input.GetButtonDown("Jump") && (areWeGrounded || areWeCoyoteTime);
 
         }
     }
 
     void FixedUpdate()
     {
+        CheckTheGround();
         if (possessed)
         {
             moveCharacter();
             if (jump)
             {
                 doJump();
-            }
-        }
-    }
-
-
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (possessed)
-        {
-
-            {
-                for (int i = 0; i < collision.contactCount; i++)
-                {
-                    if (Vector2.Dot(collision.GetContact(i).normal.normalized, Vector2.up) >= contactLeeway)
-                    {
-                        grounded = true;
-                    }
-                }
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.contactCount == 0 && possessed)
-        {
-            if (groundedCoroutine == null && grounded)
-            {
-                groundedCoroutine = StartCoroutine("stopGrounded");
-
             }
         }
     }

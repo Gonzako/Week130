@@ -19,6 +19,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &599748325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371295604408254122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f990a2fb6eeba7945a6d45639c9b114d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallScale: 2
+  donwardVelCheck: 0
 --- !u!114 &807622746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,6 +63,21 @@ PrefabInstance:
       propertyPath: componentsToDisable.Array.data[1]
       value: 
       objectReference: {fileID: 807622746}
+    - target: {fileID: 8492217459324468722, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: contactLeeway
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492217459324468722, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: jumpForce
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492217459324468723, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468724, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_Offset.x
@@ -72,12 +101,12 @@ PrefabInstance:
     - target: {fileID: 8492217459324468725, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.312
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468725, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.148
+      value: -5.91
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468725, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
@@ -131,12 +160,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2094157912208876536, guid: 02c654748731ae04d87d3af95b781fb3,
-        type: 3}
-    - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
-        type: 3}
       propertyPath: m_SortingLayerID
       value: -849969235
       objectReference: {fileID: 0}
@@ -145,6 +168,12 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8492217459964589505, guid: bda247ffbd296084babb55f53128f9fa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2094157912208876536, guid: 02c654748731ae04d87d3af95b781fb3,
+        type: 3}
     - target: {fileID: 8492217459964589506, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.x

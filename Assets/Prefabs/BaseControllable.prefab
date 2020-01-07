@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8492217459324468724}
   - component: {fileID: 8492217459324468722}
   - component: {fileID: 8492217459324468721}
+  - component: {fileID: 444577792}
   m_Layer: 10
-  m_Name: Controllable
-  m_TagString: Untagged
+  m_Name: BaseControllable
+  m_TagString: PlayerControllable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +50,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.3
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.3
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 1
@@ -84,12 +85,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1980a56ed8b67145aeb0dd7e93c0562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactLeeway: 0.194
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  contactLeeway: 0.95
   possessed: 0
-  coyoteTime: 0.3
-  jumpForce: 150
+  coyoteTime: 1
+  jumpForce: 300
   horizontalSpeed: 300
   raycastDownLeeway: 0.2
+  extraDistanceCheck: 0
+  coyoteTimeAmount: 0.5
 --- !u!114 &8492217459324468721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,6 +110,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   componentsToDisable:
   - {fileID: 8492217459324468722}
+--- !u!114 &444577792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8492217459324468726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f990a2fb6eeba7945a6d45639c9b114d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallScale: 2
+  donwardVelCheck: 0
 --- !u!1 &8492217459964589507
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +194,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3180bd7362ba5a048b2ab43b5f0b2e4a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.754717, g: 0.09611962, b: 0.09611962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
