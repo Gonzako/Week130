@@ -416,6 +416,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotatoPOssesable
       objectReference: {fileID: 0}
+    - target: {fileID: 7489343621833808686, guid: da2ce7acc07e55d439298d8228743d78,
+        type: 3}
+      propertyPath: groundLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489343621833808686, guid: da2ce7acc07e55d439298d8228743d78,
+        type: 3}
+      propertyPath: extraDistanceCheck
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7489343623353684765, guid: da2ce7acc07e55d439298d8228743d78,
         type: 3}
       propertyPath: m_Color.r
@@ -1468,7 +1478,7 @@ GameObject:
   - component: {fileID: 1810399227}
   - component: {fileID: 1810399226}
   - component: {fileID: 1810399225}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

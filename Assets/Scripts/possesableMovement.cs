@@ -87,9 +87,11 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     private void doJump()
     {
+
         onThisJump?.Invoke();
         rb.AddForce(Vector2.up * jumpForce);
-        grounded = false;
+        canWeCoyoteTime = false;
+        areWeGrounded = false;
         jump = false;
     }
 
@@ -103,12 +105,13 @@ public class possesableMovement : MonoBehaviour, IPossesable
             _DebugColour = Color.green;
             _CurrentHitDistance = _castHit.distance + cb.bounds.extents.y;
 #endif
-
+            
             if (lastUpdateHit.collider == null)
             {
                 canWeCoyoteTime = true;
             }
             areWeGrounded = true;
+            Debug.Log("We are grounded");
         }
         else
         {
@@ -148,7 +151,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
         if (possessed)
         {
             horizontalInput = (int)Input.GetAxisRaw("Horizontal");
-            jump = Input.GetButtonDown("Jump") && (areWeGrounded || areWeCoyoteTime);
+            jump = Input.GetButtonDown("Jump") && (areWeGrounded);
 
         }
     }

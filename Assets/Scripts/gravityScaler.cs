@@ -43,7 +43,7 @@ public class gravityScaler : MonoBehaviour
  
     void FixedUpdate()
     {
-        Debug.Log(rb.velocity.y);
+
         donwardVelCheck = rb.velocity.y;
         if(rb.velocity.y < 0)
         {
