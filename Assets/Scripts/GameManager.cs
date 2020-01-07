@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
     private void CacheRefences()
     {
         _playerKillable = GameObject.FindGameObjectWithTag(_playerBodyTag).GetComponent<killable>();
+        if(_playerKillable.gameObject == null)
+        {
+            Debug.LogError("Could not find Gameobject tagged " + _playerBodyTag);
+        } else if (_playerKillable == null)
+        {
+
+            Debug.LogError("Game object tagged" + _playerBodyTag + "has no killable component");
+        }
         _ghost = FindObjectOfType<GhostController>();
     }
 
