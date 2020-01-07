@@ -6,8 +6,10 @@ using UnityEngine;
 public class PossessController : MonoBehaviour
 {
     [SerializeField] private possesableMovement _possessableCharacter = null;
+    [SerializeField] private float _possessionRadius;
     private List<possesableMovement> _possesableCharacters;
     private possesableMovement _currentlyPossessed;
+    private possesableMovement _lastHighlighted;
     private GhostController _ghost;
     private Transform _transform;
     private bool _canPossess;
@@ -15,6 +17,7 @@ public class PossessController : MonoBehaviour
     public event Action<GameObject> onPossessing, onDepossessing;
 
     public delegate void PosessionEvents(possesableMovement character);
+
     public static PosessionEvents onAnyPosessionPrompt;
     public static PosessionEvents onAnyPosessionPromptEnd;
 
@@ -59,13 +62,14 @@ public class PossessController : MonoBehaviour
 
     private void PromptCharacterPosession()
     {
-        if (_possessableCharacter != null)
+        if (_possessableCharacter != null && Vector2.Distance(_transform.position,
+            _possessableCharacter.transform.position) < _possessionRadius)
         {
             onAnyPosessionPrompt?.Invoke(_possessableCharacter);
+            _lastHighlighted = _possessableCharacter;
             Debug.Log(_possessableCharacter.name + "can be controlled!");
             if (Input.GetKeyDown(KeyCode.E))
             {
-
                 _possessableCharacter.onPosess();
                 _currentlyPossessed = _possessableCharacter;
                 onPossessing.Invoke(_currentlyPossessed.gameObject);
@@ -74,9 +78,7 @@ public class PossessController : MonoBehaviour
             }
         }
         else
-        {
-            onAnyPosessionPromptEnd?.Invoke(_possessableCharacter);
-        }
+            onAnyPosessionPromptEnd?.Invoke(_lastHighlighted);
     }
 
     private possesableMovement GetNearestPosessableCharacter()
