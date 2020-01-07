@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 570138618}
   - component: {fileID: 570138622}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: Button - BackMM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: In-Game
+  ButtonName: BackMM
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -2816,7 +2816,7 @@ GameObject:
   - component: {fileID: 725137374}
   - component: {fileID: 725137373}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button - Restart Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2950,8 +2950,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: In-Game
+  ButtonName: Restart Level
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -5238,7 +5238,7 @@ GameObject:
   - component: {fileID: 951325288}
   - component: {fileID: 951325287}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button - NextLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5372,8 +5372,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 1
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: In-Game
+  ButtonName: NextLevel
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
