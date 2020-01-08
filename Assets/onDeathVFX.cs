@@ -28,11 +28,13 @@ public class onDeathVFX : MonoBehaviour
     #region Private Methods
     private void handleDeath(GameObject caller)
     {
-        foreach(GameObject n in gameObjects)
+        for (int i = 0; i < gameObjects.Count; i++)
         {
-            n.transform.position = caller.transform.position;
-            n.SetActive(true);
+            gameObjects[i].transform.position = caller.transform.position;
+            gameObjects[i].SetActive(true);
         }
+
+
     }
     #endregion
 
@@ -52,8 +54,8 @@ public class onDeathVFX : MonoBehaviour
         gameObjects = new List<GameObject>(VFXToSpawnOnDeath.Count);
         for (int i = 0; i < VFXToSpawnOnDeath.Count; i++)
         {
-            gameObjects[i] = Instantiate<GameObject>(VFXToSpawnOnDeath[i]);
-            
+            gameObjects[i] = Instantiate(VFXToSpawnOnDeath[i]);
+            gameObjects[i].SetActive(false);
         }
     }
 

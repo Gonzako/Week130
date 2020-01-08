@@ -477,6 +477,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123728290}
     m_Modifications:
+    - target: {fileID: 6951372619971300994, guid: da2ce7acc07e55d439298d8228743d78,
+        type: 3}
+      propertyPath: VFXToSpawnOnDeath.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951372619971300994, guid: da2ce7acc07e55d439298d8228743d78,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7489343621833808681, guid: da2ce7acc07e55d439298d8228743d78,
         type: 3}
       propertyPath: m_LocalPosition.x
