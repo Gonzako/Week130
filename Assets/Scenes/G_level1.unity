@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -365,6 +365,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 533101572, guid: e099865ed42407f40afabf4f23aaa01d, type: 3}
+      propertyPath: _LevelFailView
+      value: 
+      objectReference: {fileID: 1495248806}
+    - target: {fileID: 533101572, guid: e099865ed42407f40afabf4f23aaa01d, type: 3}
+      propertyPath: _LevelCompleteView
+      value: 
+      objectReference: {fileID: 776229950}
     - target: {fileID: 6910083209784558677, guid: e099865ed42407f40afabf4f23aaa01d,
         type: 3}
       propertyPath: m_Name
@@ -739,6 +747,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: -1, y: -2, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: -2, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 1, y: -2, z: 0}
     second:
       m_TileIndex: 1
@@ -777,21 +803,21 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 899bf9ef7f22a9c499cfab8bf8455dda, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: ee94cf60634f69f48897e13ade94259d, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 2b57019936084744ab21640c490478bd, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 21300000, guid: 47c05211a965bcc45a008d4078c9c858, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 21300000, guid: d706c557e5a6af342a364007531f7365, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 21300000, guid: 24c374c86da992545a03f4c51a9a7224, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 22
+  - m_RefCount: 24
     m_Data:
       e00: 1
       e01: 0
@@ -810,7 +836,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 22
+  - m_RefCount: 24
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -841,33 +867,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1522401196}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &533101571 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6910083209784558677, guid: e099865ed42407f40afabf4f23aaa01d,
+--- !u!114 &533101573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 533101573, guid: e099865ed42407f40afabf4f23aaa01d,
     type: 3}
   m_PrefabInstance: {fileID: 290279825}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &533101572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533101571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d95a89e4903f04a941980307ebc130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _LevelFailView: {fileID: 1495248806}
-  _LevelCompleteView: {fileID: 776229950}
---- !u!114 &533101573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533101571}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c57ac271fb249634fafb085963f90d72, type: 3}
@@ -1413,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 533101573}
+    - target: {fileID: 951325288, guid: 7382804205581c44dbb0b78a06a0fc7f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 1312908215, guid: 7382804205581c44dbb0b78a06a0fc7f, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
@@ -1910,6 +1920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: groundLayers.m_Bits
       value: 2560
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489343621833808686, guid: da2ce7acc07e55d439298d8228743d78,
+        type: 3}
+      propertyPath: jumpForce
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2ce7acc07e55d439298d8228743d78, type: 3}
