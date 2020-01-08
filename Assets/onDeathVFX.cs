@@ -18,7 +18,7 @@ public class onDeathVFX : MonoBehaviour
     #endregion
 
     #region Private Fields
-    private List<GameObject> gameObjects;
+    private List<GameObject> gameObjects = new List<GameObject>();
     killable killableScript;
     #endregion
 
@@ -54,8 +54,9 @@ public class onDeathVFX : MonoBehaviour
         gameObjects = new List<GameObject>(VFXToSpawnOnDeath.Count);
         for (int i = 0; i < VFXToSpawnOnDeath.Count; i++)
         {
-            gameObjects[i] = Instantiate(VFXToSpawnOnDeath[i]);
-            gameObjects[i].SetActive(false);
+            var pooledObject = Instantiate(VFXToSpawnOnDeath[i]);
+            gameObjects.Add(pooledObject);
+            pooledObject.SetActive(true);
         }
     }
 
