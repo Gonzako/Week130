@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -347,7 +347,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2117134065}
     - target: {fileID: 1800618784149361669, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -371,12 +371,12 @@ PrefabInstance:
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: LoopBehavior.PresetName
-      value: UpAndDownFast
+      value: UpAndDownSlow
       objectReference: {fileID: 0}
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: LoopBehavior.Animation.Move.By.y
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: LoopBehavior.Animation.Scale.Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: LoopBehavior.Animation.Scale.Ease
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
@@ -441,6 +441,31 @@ PrefabInstance:
     - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
         type: 3}
       propertyPath: LoopBehavior.Animation.Fade.Duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.Ease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Move.Duration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Scale.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824728071983978078, guid: 7382804205581c44dbb0b78a06a0fc7f,
+        type: 3}
+      propertyPath: LoopBehavior.Animation.Fade.From
       value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1217,8 +1242,9 @@ GameObject:
   - component: {fileID: 1456107550}
   - component: {fileID: 1456107554}
   - component: {fileID: 1456107553}
-  - component: {fileID: 1456107552}
   - component: {fileID: 1456107551}
+  - component: {fileID: 1456107552}
+  - component: {fileID: 1456107555}
   m_Layer: 12
   m_Name: GoalTileMap
   m_TagString: Untagged
@@ -1262,7 +1288,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1817,6 +1843,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1456107555
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456107549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.5042305, y: -1.0746675}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8275471, y: 2.4284868}
+  m_EdgeRadius: 0
 --- !u!1001 &1618254198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1824,11 +1876,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123728290}
     m_Modifications:
-    - target: {fileID: 8492217459324468722, guid: bda247ffbd296084babb55f53128f9fa,
-        type: 3}
-      propertyPath: groundLayers.m_Bits
-      value: 2560
-      objectReference: {fileID: 0}
     - target: {fileID: 8492217459324468725, guid: bda247ffbd296084babb55f53128f9fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3414,6 +3461,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!20 &2117134065 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2965073850059666516, guid: ddde4f50abf42da45a455f170ff29892,
+    type: 3}
+  m_PrefabInstance: {fileID: 1289539397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2125390165
 PrefabInstance:
   m_ObjectHideFlags: 0

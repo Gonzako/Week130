@@ -51,6 +51,11 @@ public class PosessionInteractive : MonoBehaviour
             _interact.GetComponentInChildren<TMPro.TextMeshProUGUI>().enabled = false;
             character.GetComponentInChildren<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 0.0F);
         }
+        else
+        {
+            Debug.LogError("UI prompt recieved null when it expected a PossesableMovement");
+        }
+
     }
 
     public Vector3 worldToUISpace(Canvas parentCanvas, Vector3 worldPos)
