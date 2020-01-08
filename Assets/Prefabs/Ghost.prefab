@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 7542255271889716747}
   - component: {fileID: 7417176977343418702}
   - component: {fileID: 8916849855329511089}
+  - component: {fileID: 1994958722}
   m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
@@ -165,7 +166,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b9d26bddae554184da100f7ca3ece31e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,8 +186,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd3f6e79dacbda242893790f63a1b3a0, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 72f9c2ad80c8588468c498816caf518a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab69557246a0c4297267d9a8f4ea53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _floatSpeed: 25
+  _floatSpeed: 10
   _horizontalInput: 0
   _verticalInput: 0
 --- !u!114 &7542255271889716747
@@ -246,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _possessableCharacter: {fileID: 0}
+  _possessionRadius: 0.5
 --- !u!114 &7417176977343418702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +261,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interact: {fileID: 0}
+  verticalAdder: 0.1
+  sizeMultiplier: 2
+  ViewCategory: 
+  ViewName: 
 --- !u!61 &8916849855329511089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -274,9 +280,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.24, y: 0.24, z: 0.24, w: 0.24}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 4.7999997, y: 4.7999997}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -285,3 +291,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!95 &1994958722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916849855329511082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d885f4c1c7ec04f49a86a4b6553981c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

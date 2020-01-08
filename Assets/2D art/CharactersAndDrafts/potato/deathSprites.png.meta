@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: f61ff99fd3fbe06459a4ba34680d5d4a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7649175765815941346
+    second: deathSprites_0
+  - first:
+      213: 7569263125753692731
+    second: deathSprites_1
+  - first:
+      213: -6262413631944684181
+    second: potato_ghost
+  - first:
+      213: 64567083792759534
+    second: deathSprites_3
+  - first:
+      213: 3820171771332472269
+    second: deathSprites_4
+  - first:
+      213: -7711134693908091827
+    second: deathSprites_5
+  - first:
+      213: 8667298999794909878
+    second: deathSprites_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +61,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,7 +153,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: deathSprites_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 291
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67637100a2bd65b47bf24c29d6cb40c2
+      internalID: -7649175765815941346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deathSprites_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 201
+        width: 59
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c06d33ab5a3b04a996fa1a8ec44406
+      internalID: 7569263125753692731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potato_ghost
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 184
+        width: 112
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3c36ffc10b4f042af2e090e07638d1
+      internalID: -6262413631944684181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deathSprites_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 203
+        width: 87
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67f188c87e7e1f4b8c5cb9114e8e506
+      internalID: 64567083792759534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deathSprites_4
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 88
+        width: 175
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2f00fbd8ba0bc40b7854f8765eb7af
+      internalID: 3820171771332472269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deathSprites_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 80
+        width: 121
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e62d4e5c967604a87cca964f195141
+      internalID: -7711134693908091827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deathSprites_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 85
+        width: 140
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb8aed52575d2c4b8d7f0591a2bf1c2
+      internalID: 8667298999794909878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

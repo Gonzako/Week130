@@ -1,0 +1,5 @@
+{
+"duplicatePadding": true,
+ filterMin: MipMapLinearNearest  ,
+ filterMag: Nearest 
+}

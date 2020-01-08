@@ -7,11 +7,9 @@ public class GameSceneManagement : MonoBehaviour
 {
     public void LoadNextLevel()
     {
-        int index = SceneManager.GetActiveScene().buildIndex + 1;
-        if (index < SceneManager.sceneCount)
-        {
-            SceneManager.LoadScene(index);
-        }return;
+        
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void LoadMainMenu()
