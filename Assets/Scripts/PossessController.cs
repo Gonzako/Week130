@@ -6,7 +6,7 @@ using UnityEngine;
 public class PossessController : MonoBehaviour
 {
     [SerializeField] private possesableMovement _possessableCharacter = null;
-    [SerializeField] private float _possessionRadius;
+    [SerializeField] private float _possessionRadius = 0.5f;
     private List<possesableMovement> _possesableCharacters;
     private possesableMovement _currentlyPossessed;
     private possesableMovement _lastHighlighted;

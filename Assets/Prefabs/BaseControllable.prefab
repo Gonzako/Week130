@@ -91,7 +91,7 @@ MonoBehaviour:
   contactLeeway: 0.95
   possessed: 0
   coyoteTime: 1
-  jumpForce: 300
+  jumpForce: 150
   horizontalSpeed: 300
   raycastDownLeeway: 0.2
   extraDistanceCheck: 0.05
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b9d26bddae554184da100f7ca3ece31e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
