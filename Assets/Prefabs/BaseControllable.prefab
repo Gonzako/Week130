@@ -91,7 +91,7 @@ MonoBehaviour:
   contactLeeway: 0.95
   possessed: 0
   coyoteTime: 1
-  jumpForce: 150
+  jumpForce: 300
   horizontalSpeed: 300
   raycastDownLeeway: 0.2
   extraDistanceCheck: 0.05

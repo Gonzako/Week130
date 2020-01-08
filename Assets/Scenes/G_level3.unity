@@ -477,11 +477,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123728290}
     m_Modifications:
-    - target: {fileID: 7489343621833808680, guid: da2ce7acc07e55d439298d8228743d78,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.85
-      objectReference: {fileID: 0}
     - target: {fileID: 7489343621833808681, guid: da2ce7acc07e55d439298d8228743d78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,41 +1055,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123728290}
     m_Modifications:
-    - target: {fileID: 2371295602909279902, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.333
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295602909279902, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.122
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254120, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254120, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254120, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254120, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.808787
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254120, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: m_Direction
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2371295604408254121, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1154,11 +1114,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CarrotControllable
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371295604408254126, guid: 3aff28366d1681f42b3e709c12aaae66,
-        type: 3}
-      propertyPath: groundLayers.m_Bits
-      value: 2560
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}
@@ -2480,7 +2435,6 @@ GameObject:
   - component: {fileID: 1886258697}
   - component: {fileID: 1886258700}
   - component: {fileID: 1886258699}
-  - component: {fileID: 1886258698}
   m_Layer: 9
   m_Name: bg
   m_TagString: Untagged
@@ -2502,22 +2456,6 @@ Transform:
   m_Father: {fileID: 939877255}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1886258698
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886258696}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!483693784 &1886258699
 TilemapRenderer:
   m_ObjectHideFlags: 0
