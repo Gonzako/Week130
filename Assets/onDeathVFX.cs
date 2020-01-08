@@ -4,17 +4,21 @@
  * Gonzako123@gmail.com
  *
  */
- 
+
+using System;
+using System.Collections.Generic;
 using UnityEngine;
  
 public class onDeathVFX : MonoBehaviour
 {
     #region Public Fields
 
-    public GameObject[] VFXToSpawnOnDeath;
+    public List<GameObject> VFXToSpawnOnDeath;
+
     #endregion
 
     #region Private Fields
+    private List<GameObject> gameObjects;
     killable killableScript;
     #endregion
 
@@ -24,9 +28,10 @@ public class onDeathVFX : MonoBehaviour
     #region Private Methods
     private void handleDeath(GameObject caller)
     {
-        foreach(GameObject n in VFXToSpawnOnDeath)
+        foreach(GameObject n in gameObjects)
         {
-            Instantiate<GameObject>(n, caller.transform.position, Quaternion.identity);
+            n.transform.position = caller.transform.position;
+            n.SetActive(true);
         }
     }
     #endregion
@@ -39,6 +44,17 @@ public class onDeathVFX : MonoBehaviour
     {
         killableScript = GetComponent<killable>();
         killableScript.onThisKill += handleDeath;
+        poolVFX();
+    }
+
+    private void poolVFX()
+    {
+        gameObjects = new List<GameObject>(VFXToSpawnOnDeath.Count);
+        for (int i = 0; i < VFXToSpawnOnDeath.Count; i++)
+        {
+            gameObjects[i] = Instantiate<GameObject>(VFXToSpawnOnDeath[i]);
+            
+        }
     }
 
     private void OnDisable()
