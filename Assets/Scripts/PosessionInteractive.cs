@@ -45,10 +45,12 @@ public class PosessionInteractive : MonoBehaviour
 
     private void InteractionUIPromptEnd(possesableMovement character)
     {
-
-        _interact.GetComponent<Image>().enabled = false;
-        _interact.GetComponentInChildren<TMPro.TextMeshProUGUI>().enabled = false;
-        character.GetComponentInChildren<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 0.0F);
+        if (character != null)
+        {
+            _interact.GetComponent<Image>().enabled = false;
+            _interact.GetComponentInChildren<TMPro.TextMeshProUGUI>().enabled = false;
+            character.GetComponentInChildren<SpriteRenderer>().material.SetFloat("_OutlineEnabled", 0.0F);
+        }
     }
 
     public Vector3 worldToUISpace(Canvas parentCanvas, Vector3 worldPos)
