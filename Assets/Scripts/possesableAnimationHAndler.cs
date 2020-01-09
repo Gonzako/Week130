@@ -19,6 +19,7 @@ public class possesableAnimationHandler : MonoBehaviour
 
     #region Private Fields
     Rigidbody2D rb;
+    killable killableScript;
     Vector3 nextLocalSpace;
     possesableMovement PossesableMovement;
     private const string jumpTrigger = "Jump";
@@ -77,6 +78,13 @@ public class possesableAnimationHandler : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
         PossesableMovement = GetComponent<possesableMovement>();
+        killableScript = GetComponent<killable>();
+        killableScript.onThisKill += callDeath;
+    }
+
+    private void callDeath(GameObject obj)
+    {
+        animator.SetTrigger("Death");
     }
 
     private void Update()
