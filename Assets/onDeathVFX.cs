@@ -56,7 +56,6 @@ public class onDeathVFX : MonoBehaviour
         {
             var pooledObject = Instantiate(VFXToSpawnOnDeath[i]);
             gameObjects.Add(pooledObject);
-            pooledObject.SetActive(true);
         }
     }
 
