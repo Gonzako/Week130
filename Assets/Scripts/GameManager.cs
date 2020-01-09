@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelComplete()
     {
+        Debug.Log("level Complete called");
         onLevelComplete?.Invoke();
     }
 

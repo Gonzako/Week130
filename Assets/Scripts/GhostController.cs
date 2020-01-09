@@ -83,11 +83,12 @@ public class GhostController : MonoBehaviour
     {
         if (_horizontalInput < 0)
         {
-            _playerSprite.flipX = true;
+            transform.localScale = new Vector3(1, 1);
         }
         else if (_horizontalInput > 0)
         {
-            _playerSprite.flipX = false;
+            transform.localScale = new Vector3(-1, 1);
+            
         }
     }
 
