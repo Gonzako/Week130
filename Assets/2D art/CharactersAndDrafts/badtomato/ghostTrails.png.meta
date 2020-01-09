@@ -1,12 +1,99 @@
 fileFormatVersion: 2
 guid: f41be4908b341bc4fa5e08aab7515962
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2523099733250433608
+    second: ghostTrails_0
+  - first:
+      213: 5248193710931620924
+    second: ghostTrails_1
+  - first:
+      213: -2944433325490923599
+    second: ghostTrails_2
+  - first:
+      213: -1879835644743733929
+    second: ghostTrails_3
+  - first:
+      213: 9007185609227991129
+    second: ghostTrails_4
+  - first:
+      213: 9170206618508450083
+    second: ghostTrails_5
+  - first:
+      213: 8258423133566183707
+    second: ghostTrails_6
+  - first:
+      213: 4838739037083783902
+    second: ghostTrails_7
+  - first:
+      213: 7082724983721401197
+    second: ghostTrails_8
+  - first:
+      213: 8722367364028826268
+    second: ghostTrails_9
+  - first:
+      213: -2941488355350153744
+    second: ghostTrails_10
+  - first:
+      213: -4453779357702949088
+    second: ghostTrails_11
+  - first:
+      213: 4645171015079626177
+    second: ghostTrails_12
+  - first:
+      213: -4080584360829452581
+    second: ghostTrails_13
+  - first:
+      213: 818095701058180070
+    second: ghostTrails_14
+  - first:
+      213: 7974764484310656559
+    second: ghostTrails_15
+  - first:
+      213: 5816043130277010235
+    second: ghostTrails_16
+  - first:
+      213: 2973676960088136346
+    second: ghostTrails_17
+  - first:
+      213: 4383081979871278968
+    second: ghostTrails_18
+  - first:
+      213: 36841047241665834
+    second: ghostTrails_19
+  - first:
+      213: 1310115512634500135
+    second: ghostTrails_20
+  - first:
+      213: 6887299047006633419
+    second: ghostTrails_21
+  - first:
+      213: 6326047939796918534
+    second: ghostTrails_22
+  - first:
+      213: 215528659532667074
+    second: ghostTrails_23
+  - first:
+      213: 264089596899654730
+    second: ghostTrails_24
+  - first:
+      213: 3042455317374550828
+    second: ghostTrails_25
+  - first:
+      213: 1937466162192022128
+    second: ghostTrails_26
+  - first:
+      213: -7938094489645825055
+    second: ghostTrails_27
+  - first:
+      213: 3885180438078106415
+    second: ghostTrails_28
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,24 +121,24 @@ TextureImporter:
     filterMode: -1
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -118,13 +205,634 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ghostTrails_0
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 901
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95632cbe65ec684b96ef24e3a2754db
+      internalID: 2523099733250433608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_1
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 835
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c8b51d5c068b04b863e094c4871dd3
+      internalID: 5248193710931620924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_2
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 831
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f37a47ed0502b42837013c6b5373e2
+      internalID: -2944433325490923599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_3
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 829
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ece004eb032a5b4a9824555a5e3183d
+      internalID: -1879835644743733929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_4
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 835
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7873aed37eb62544bb373f97867ec98
+      internalID: 9007185609227991129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_5
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 834
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf54fa8e45c7f63458b8dd820d28f232
+      internalID: 9170206618508450083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_6
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 834
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087ab74ff4ea90d40b7f42a331740ca2
+      internalID: 8258423133566183707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 832
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f38a1b9d76c354aad5aa54a1fb696e
+      internalID: 4838739037083783902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_8
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 834
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d479bcbb62b415499f06be9fafbba5b
+      internalID: 7082724983721401197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_9
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 833
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab13f42bfe140e44bfa32a487dbe1e5
+      internalID: 8722367364028826268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_10
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 832
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3c2e506065232418850f123a03ee5e
+      internalID: -2941488355350153744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 829
+        width: 26
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6959366415fcffc4798741478022df43
+      internalID: -4453779357702949088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_12
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 830
+        width: 17
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61b7bf38a41e93418d81e1879774431
+      internalID: 4645171015079626177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 734
+        width: 59
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8b052e81f84e0419a49f3fbd410a2d
+      internalID: -4080584360829452581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_14
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 775
+        width: 7
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f2b764c02bc66479faf7bbc11ca4b5
+      internalID: 818095701058180070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_15
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 705
+        width: 48
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f799f7e0e8919cf46acdb1b0c7317614
+      internalID: 7974764484310656559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_16
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 676
+        width: 100
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ec90a7f2f3879488fbad58b4eb23de
+      internalID: 5816043130277010235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 715
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd5dc2ed17fadc40b71323f94a7de27
+      internalID: 2973676960088136346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_18
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 737
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e30082ce6520b142bda4532ead25685
+      internalID: 4383081979871278968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_19
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 690
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464da49ee4a5b22489a76df1c1e5ef64
+      internalID: 36841047241665834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_20
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 666
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47787df6db2b14429d1ab6d43e6b858
+      internalID: 1310115512634500135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_21
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 661
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50ab835731c5c2478bfca456db4b69f
+      internalID: 6887299047006633419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_22
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 657
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b61a713b76c2a04d8bcbff32d65441f
+      internalID: 6326047939796918534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_23
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 659
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad9f7806c9892d48ac957c36b6ceac8
+      internalID: 215528659532667074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_24
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 656
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc54959dbc6e2bd4ba1b41721b1be410
+      internalID: 264089596899654730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_25
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 655
+        width: 37
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf620531d9d1da47ac9e530f2051933
+      internalID: 3042455317374550828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 653
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1bc7eb9558c854bba67a0cd1ff37d9
+      internalID: 1937466162192022128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_27
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 461
+        width: 157
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250f9ea295d2e1948b0a50a3d35bcb8e
+      internalID: -7938094489645825055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghostTrails_28
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 261
+        width: 132
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8554eed6c5b5845919ac049da3c721
+      internalID: 3885180438078106415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
