@@ -47,7 +47,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
 
     #region GBSavers
 
-#if UNITY_EDITOR
+#if true
     private Color _DebugColour;
     private float _CurrentHitDistance;
 #endif
@@ -175,7 +175,7 @@ public class possesableMovement : MonoBehaviour, IPossesable
     private void OnDrawGizmos()
     {
 
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (true)
         {
             Gizmos.color = _DebugColour;
             Gizmos.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y - _CurrentHitDistance));

@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: -6377156442884199678, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: VFXToSpawnOnDeath.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 807622747, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}
       propertyPath: m_Controller
@@ -217,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 2371295604408254122, guid: 3aff28366d1681f42b3e709c12aaae66,
         type: 3}
       propertyPath: m_TagString
-      value: PlayerControllable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aff28366d1681f42b3e709c12aaae66, type: 3}
